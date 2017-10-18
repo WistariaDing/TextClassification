@@ -70,6 +70,7 @@ print('Found %s unique tokens.' % len(word_index))
 
 data = pad_sequences(sequences, maxlen=MAX_SEQUENCE_LENGTH)
 labels = to_categorical(np.asarray(labels))
+labels = np.asarray(labels, dtype = np.float32)
 print('Shape of data tensor: ', data.shape)
 print('Shape of label tensor: ',labels.shape)
 
